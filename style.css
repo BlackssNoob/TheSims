@@ -1,0 +1,260 @@
+.timeline {
+    position: relative;
+    padding: 40px 0;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    width: 2px;
+    height: 100%;
+    background: #0d6efd;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.timeline-icon {
+    width: 50px;
+    height: 50px;
+    background: #0d6efd;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.exp-card {
+    border-left: 3px solid #0d6efd;
+    transition: all 0.3s;
+}
+
+.exp-card:hover {
+    transform: translateX(10px);
+}
+
+.personal-badge {
+    background: #e9ecef;
+    border-radius: 20px;
+    padding: 8px 15px;
+    margin: 5px;
+    display: inline-block;
+}
+
+.hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://source.unsplash.com/random/1920x1080/?coding') center/cover;
+    height: 100vh;
+    color: white;
+}
+
+.section-title {
+    text-align: center;
+    padding: 4rem 0;
+    font-weight: bold;
+}
+
+.project-card {
+    transition: transform 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+}
+
+.project-card a {
+    text-decoration: none; /* Remove o sublinhado */
+    color: inherit; /* Mantém a cor original do texto */
+}
+.project-card a:hover {
+    color: #16a085; /* Cor personalizada quando passar o mouse sobre o link */
+    text-decoration: none; /* Garante que não fique sublinhado no hover */
+}
+
+
+
+
+.skill-icon {
+    font-size: 3rem;
+    margin: 1rem;
+    color: #0d6efd;
+}
+
+footer {
+    background: #2c3e50;
+    color: white;
+    padding: 3rem 0;
+}
+
+.profile-container {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+    perspective: 1000px;
+}
+
+.profile-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    position: relative;
+    z-index: 2;
+    transition: all 0.5s ease;
+    animation: float 6s ease-in-out infinite;
+}
+
+.profile-container::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, #00ff88, #55ff00, #017e28);
+    z-index: 1;
+    animation: rotate 20s linear infinite;
+    opacity: 0.8;
+}
+
+.profile-container:hover .profile-img {
+    transform: scale(1.05) rotate(5deg);
+    filter: drop-shadow(0 0 20px rgba(0, 255, 136, 0.5));
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.profile-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 50%;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.2);
+    z-index: 3;
+}
+
+.shine-effect {
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(to right,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 0.8) 50%,
+            rgba(255, 255, 255, 0) 100%);
+    transform: rotate(45deg);
+    z-index: 4;
+    animation: shine 8s infinite;
+    opacity: 0;
+}
+
+@keyframes shine {
+    0% {
+        opacity: 0;
+        left: -50%;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        left: 150%;
+    }
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    padding: 20px;
+}
+
+.skills-container img {
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+    border-radius: 8px;
+}
+
+.skills-container img:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* 🔹 Seção Hero cobrindo toda a tela */
+.hero-section {
+    width: 100vw; 
+    height: 90vh; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f5efe7; /* Tom bege-terroso */
+    overflow: hidden;
+
+    /* 🔹 Configuração do Background */
+    background-image: url('images/baner2.png'); /* Substitua pelo caminho da imagem */
+    background-size: 100% 100%; /* Faz a imagem cobrir a seção inteira */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Evita repetição */
+}
+
+/* 🔹 Imagem PNG menor no centro */
+.hero-image {
+    max-width: 25%; /* Garante que a imagem não fique gigante */
+    height: auto;
+    display: block;
+    margin: 0 auto; /* Centraliza horizontalmente */
+}
+
+/* 🔹 Texto centralizado */
+.hero-section h1, 
+.hero-section p {
+    position: relative;
+    color: #4a332e;
+    z-index: 2;
+    font-size: clamp(1.5rem, 3vw, 3rem);
+}
+
+/* 🔹 Botão Responsivo */
+.hero-section .btn {
+    position: relative;
+    z-index: 2;
+    background-color: #8b5e3c;
+    border-color: #704a29;
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    padding: 10px 20px;
+}
+

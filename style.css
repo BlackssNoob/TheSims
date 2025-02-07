@@ -212,28 +212,28 @@ footer {
 
 /* 🔹 Seção Hero cobrindo toda a tela */
 .hero-section {
-    width: 100vw; 
-    height: 90vh; 
+    width: 100vw; /* Largura completa da tela */
+    min-height: 100vh; /* Garante que a altura seja, no mínimo, a altura da tela */
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #f5efe7; /* Tom bege-terroso */
+    background-color: #f5efe7; /* Cor de fundo caso a imagem falhe */
     overflow: hidden;
 
     /* 🔹 Configuração do Background */
     background-image: url('images/baner2.png'); /* Substitua pelo caminho da imagem */
-    background-size: 100% 100%; /* Faz a imagem cobrir a seção inteira */
-    background-position: center; /* Centraliza a imagem */
+    background-size: cover; /* Faz a imagem cobrir a seção sem distorcer */
+    background-position: center; /* Centraliza a imagem na seção */
     background-repeat: no-repeat; /* Evita repetição */
 }
 
-/* 🔹 Imagem PNG menor no centro */
-.hero-image {
-    max-width: 25%; /* Garante que a imagem não fique gigante */
-    height: auto;
-    display: block;
-    margin: 0 auto; /* Centraliza horizontalmente */
+@media (max-width: 768px) {
+    .hero-section {
+        background-size: cover; /* A imagem vai continuar cobrindo a área */
+        min-height: 100vh; /* Para garantir que a seção sempre cubra a altura da tela */
+    }
 }
+
 
 /* 🔹 Texto centralizado */
 .hero-section h1, 

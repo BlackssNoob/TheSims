@@ -48,11 +48,7 @@
     display: inline-block;
 }
 
-.hero-section {
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://source.unsplash.com/random/1920x1080/?coding') center/cover;
-    height: 100vh;
-    color: white;
-}
+
 
 .section-title {
     text-align: center;

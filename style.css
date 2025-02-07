@@ -236,13 +236,16 @@ footer {
 
 /* 🔹 Imagem PNG menor no centro */
 .hero-image {
-    max-width: 25%; /* Garante que a imagem não fique gigante */
+    max-width: 25%;
+    /* Garante que a imagem não fique gigante */
     height: auto;
     display: block;
-    margin: 0 auto; /* Centraliza horizontalmente */
+    margin: 0 auto;
+    /* Centraliza horizontalmente */
 }
+
 /* 🔹 Texto centralizado */
-.hero-section h1, 
+.hero-section h1,
 .hero-section p {
     position: relative;
     color: #4a332e;
@@ -259,4 +262,3 @@ footer {
     font-size: clamp(1rem, 2vw, 1.5rem);
     padding: 10px 20px;
 }
-

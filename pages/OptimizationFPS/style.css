@@ -1,0 +1,252 @@
+.timeline {
+    position: relative;
+    padding: 40px 0;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    width: 2px;
+    height: 100%;
+    background: #0d6efd;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.timeline-icon {
+    width: 50px;
+    height: 50px;
+    background: #0d6efd;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.exp-card {
+    border-left: 3px solid #0d6efd;
+    transition: all 0.3s;
+}
+
+.exp-card:hover {
+    transform: translateX(10px);
+}
+
+.hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://source.unsplash.com/random/1920x1080/?coding') center/cover;
+    height: 100vh;
+    color: white;
+}
+
+.section-title {
+    text-align: center;
+    padding: 4rem 0;
+    font-weight: bold;
+}
+
+.project-card {
+    transition: transform 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+}
+
+
+footer {
+    background: #2c3e50;
+    color: white;
+    padding: 3rem 0;
+}
+
+.shine-effect {
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(to right,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 0.8) 50%,
+            rgba(255, 255, 255, 0) 100%);
+    transform: rotate(45deg);
+    z-index: 4;
+    animation: shine 8s infinite;
+    opacity: 0;
+}
+
+@keyframes shine {
+    0% {
+        opacity: 0;
+        left: -50%;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        left: 150%;
+    }
+}
+
+/* 🔹 Seção Hero cobrindo toda a tela */
+.hero-section {
+    width: 100vw; /* Largura completa da tela */
+    min-height: 100vh; /* Garante que a altura seja, no mínimo, a altura da tela */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f5efe7; /* Cor de fundo caso a imagem falhe */
+    overflow: hidden;
+
+    /* 🔹 Configuração do Background */
+    background-image: url('../../images/otimizarpage/baner1.png'); /* Substitua pelo caminho da imagem */
+    background-size: cover; /* Faz a imagem cobrir a seção sem distorcer */
+    background-position: center; /* Centraliza a imagem na seção */
+    background-repeat: no-repeat; /* Evita repetição */
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        background-size: cover; /* A imagem vai continuar cobrindo a área */
+        min-height: 100vh; /* Para garantir que a seção sempre cubra a altura da tela */
+    }
+}
+
+/* 🔹 Imagem PNG menor no centro */
+.hero-image {
+    max-width: 25%;
+    /* Garante que a imagem não fique gigante */
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    /* Centraliza horizontalmente */
+}
+
+/* 🔹 Texto centralizado */
+.hero-section h1,
+.hero-section p {
+    position: relative;
+    color: #4a332e;
+    z-index: 2;
+    font-size: clamp(1.5rem, 3vw, 3rem);
+}
+
+/* 🔹 Botão Responsivo */
+.hero-section .btn {
+    position: relative;
+    z-index: 2;
+    background-color: #8b5e3c;
+    border-color: #704a29;
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    padding: 10px 20px;
+}
+
+/* Estilizando a seção "Meu Mundo no The Sims" */
+#meu-mundo {
+    background: linear-gradient(to right, #f5f5f5, #bfffd3);
+    /* Fundo com gradiente suave */
+    padding: 60px 0;
+    color: #333;
+}
+
+#meu-mundo .section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+#meu-mundo h3 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #16a085;
+    margin-bottom: 10px;
+}
+
+#meu-mundo p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #555;
+}
+
+#meu-mundo .row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+#meu-mundo .col-md-6 {
+    flex: 1;
+}
+
+#meu-mundo img {
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    max-width: 100%;
+    height: auto;
+}
+
+#meu-mundo img:hover {
+    transform: scale(1.05);
+}
+
+/* Ajustando o layout em dispositivos menores */
+@media (max-width: 768px) {
+    #meu-mundo .row {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #meu-mundo .col-md-6 {
+        margin-bottom: 30px;
+    }
+}
+
+/* Garantir que as imagens fiquem do mesmo tamanho e embaixo do texto */
+.img-fluid {
+    height: auto;
+    max-height: 400px; /* Limitar altura das imagens */
+    max-width: 400px; /* Limitar altura das imagens */
+    display: block;  /* Garante que as imagens fiquem uma abaixo da outra */
+    margin: 20px 0; /* Espaçamento entre as imagens */
+}
+.section-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.lead {
+    font-size: 1.25rem;
+}
+.mt-4 {
+    margin-top: 30px;
+}
+.hero-section {
+    background-color: #343a40;
+    color: white;
+    padding: 100px 0;
+}
+.navbar {
+    z-index: 1000;
+}
+footer {
+    background-color: #212529;
+    color: white;
+    padding: 20px 0;
+}
